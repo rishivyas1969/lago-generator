@@ -6,4 +6,4 @@
     # Path to the repository
     path: # optional, default is ./
     # Output will be in percentage format, e.g. {"Python":"100%"}. By default it is in fractions, e.g. {"Python":1.0}. Default: false.
-    percentage: # optional
+    percentage: true
