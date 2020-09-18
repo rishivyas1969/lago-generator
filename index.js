@@ -6,6 +6,7 @@ const port = process.env.PORT || '8000' ;
 //route
 app.get('/', (req, res) => {
     res.status(200).send("Hey..How you doing.!?") ;
+    console.log("Yeah, i am Happy") ;
 })
 
 
