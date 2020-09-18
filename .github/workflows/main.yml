@@ -15,5 +15,15 @@ jobs:
           percentage: true
       - name: Print linguist result
         run: echo "${{ steps.linguist.outputs.data }}"
-      - name: Pythin script
-        run: python main.py
+  createFile:
+    name: Create A File
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: 1arp/create-a-file-action@0.2
+        with:
+          path: 'src'
+          file: 'README.md'
+          content: |
+            Hello
+            World
