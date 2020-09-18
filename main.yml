@@ -1,9 +1,0 @@
-- name: Linguist Action
-  # You may pin to the exact commit or the version.
-  # uses: fabasoad/linguist-action@d7bfe88dfca2cd342edf1913b29ee52c2a454fd7
-  uses: fabasoad/linguist-action@v1.0.1
-  with:
-    # Path to the repository
-    path: # optional, default is ./
-    # Output will be in percentage format, e.g. {"Python":"100%"}. By default it is in fractions, e.g. {"Python":1.0}. Default: false.
-    percentage: true
