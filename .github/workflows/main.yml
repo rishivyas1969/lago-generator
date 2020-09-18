@@ -14,4 +14,4 @@ jobs:
           path: './'
           percentage: true
       - name: Print linguist result
-        run: echo "${{ Object.keys(steps.linguist.outputs.data)[0] }}"
+        run: echo "${{ steps.linguist.outputs.data }}"
