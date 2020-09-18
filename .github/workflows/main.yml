@@ -16,11 +16,8 @@ jobs:
       - name: Print linguist result
         run: echo "${{ steps.linguist.outputs.data }}"
       - name: creating readme
-        uses: actions/checkout@v2
-      - uses: 1arp/create-a-file-action@0.2
-        with:
-          path: 'src'
-          file: 'README.md'
-          content: |
-            Hello
-            World
+        run: |
+            $myfile = fopen("README.md", "w")
+            fwrite($myfile, "${{ steps.linguist.outputs.data }}")
+            git commit README.md -m 'Re-build README.md'
+            git push origin
