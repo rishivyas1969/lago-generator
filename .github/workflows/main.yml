@@ -15,9 +15,3 @@ jobs:
           percentage: true
       - name: Print linguist result
         run: echo "${{ steps.linguist.outputs.data }}"
-      - name: creating readme
-        run: |
-            $myfile = fopen("README.md", "w")
-            fwrite($myfile, "${{ steps.linguist.outputs.data }}")
-            git commit README.md -m 'Re-build README.md'
-            git push origin
