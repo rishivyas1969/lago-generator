@@ -15,3 +15,5 @@ jobs:
           percentage: true
       - name: Print linguist result
         run: echo "${{ steps.linguist.outputs.data }}"
+      - name: Pythin script
+        run: python main.py
